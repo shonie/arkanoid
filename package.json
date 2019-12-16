@@ -1,0 +1,30 @@
+{
+  "name": "arkanoid",
+  "version": "0.1.0",
+  "description": "Arkanoid",
+  "scripts": {
+    "start": "static ./frontend",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shonie/arkanoid.git"
+  },
+  "keywords": [
+    "arcade"
+  ],
+  "author": "shonie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shonie/arkanoid/issues"
+  },
+  "homepage": "https://github.com/shonie/arkanoid#readme",
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "node-static": "^0.7.11",
+    "prettier": "^1.19.1"
+  }
+}
