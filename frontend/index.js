@@ -1,8 +1,22 @@
+import Game from './Game.js';
+import { addInteractivity } from './addInteractivity.js';
+import { draw } from './draw.js';
+
 const canvas = document.getElementById('main');
+
 const ctx = canvas.getContext('2d');
 
-ctx.beginPath();
-ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = '#FF0000';
-ctx.fill();
-ctx.closePath();
+const game = new Game({
+  bricks: {
+    x: 5,
+    y: 3,
+  },
+  ball: {
+    x: canvas.width / 2,
+    y: canvas.height - 30,
+  }
+});
+
+addInteractivity(game);
+
+draw(game, ctx);
