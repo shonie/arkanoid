@@ -14,6 +14,10 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: 'file-loader',
+      },
     ],
   },
   resolve: {
@@ -25,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Arkanoid'
+      title: 'Arkanoid',
     }),
   ],
 };
