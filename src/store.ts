@@ -1,7 +1,7 @@
 
 import { createStore, Store } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer, { RootState } from '../reducers';
+import rootReducer, { RootState } from './reducers';
 
 export type StoreType = Store<RootState>;
 
@@ -15,8 +15,8 @@ const store = configureStore();
 
 if ('hot' in module) {
     const hotModule: any = module as any;
-    hotModule.hot!.accept('../reducers', () =>
-        store.replaceReducer(require('../reducers'))
+    hotModule.hot!.accept('./reducers', () =>
+        store.replaceReducer(require('./reducers'))
     );
 }
 
